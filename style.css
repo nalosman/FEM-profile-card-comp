@@ -1,0 +1,121 @@
+:root {
+  --darkcyan: hsl(185, 75%, 39%);
+  --grayishblue: hsl(227, 10%, 46%);
+  --darkblue: hsl(229, 23%, 23%);
+  --darkgray: hsl(0, 0%, 59%);
+
+  --bodycopy: 1.125rem;
+}
+
+*,*::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans';
+  background-color: var(--darkcyan);
+
+  background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  /* for dettign the images position, its the opposite ways (right and bottom for top, left and top for bottom  */
+  background-position:  right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+.card-container {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 326px;
+  text-align: center;
+
+}
+
+.background {
+  background-image: url(./images/bg-pattern-card.svg);
+  height: 140px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.profile-picture {
+  border: white 5px solid;
+  border-radius: 50%;
+  z-index: 2;
+
+  position: absolute;
+  left: calc(50% - 113px/2);
+  top: calc(50% - 125px/2 - 47px);
+
+}
+
+.gray {
+  color: var(--darkgray);
+}
+
+.main-info {
+  margin-top: 4.5rem;
+  border-bottom: 1px solid #e8e9ec;
+  padding-bottom: 1.563rem;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main-info p {
+  margin-top: 8px;
+
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.individual-stat {
+  flex-direction: column;
+}
+
+.individual-stat p {
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+
+.individual-stat_category {
+  font-size: 0.625rem;
+  font-weight: 400;
+
+  margin-top: 0.563rem;
+}
+
+@media (max-width: 320px){
+
+  .card-container {
+    width: 280px;
+  }
+  
+}
